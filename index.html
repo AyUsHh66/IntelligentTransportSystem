@@ -3,99 +3,298 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Intelligent Transport Systems — Portfolio</title>
-    <meta name="description" content="Portfolio showcasing Intelligent Transport System projects: traffic optimization, fleet management, IoT predictive maintenance." />
+    <title>ITS Nexus — Intelligent Transport Systems Blog</title>
+    <meta name="description" content="Exploring the future of mobility: AI-driven traffic systems, autonomous vehicles, smart cities, and transportation innovation." />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div id="progress-bar"></div>
+    
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#">
-          <img src="assets/logo.svg" alt="ITS Portfolio" class="logo" />
-          <span class="brand-text">ITS Portfolio</span>
+          <img src="assets/logo.svg" alt="ITS Nexus" class="logo" />
+          <span class="brand-text">ITS <span class="highlight">NEXUS</span></span>
         </a>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav id="site-nav" class="site-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#featured" class="nav-link">Featured</a>
+          <a href="#articles" class="nav-link">Articles</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#subscribe" class="nav-link">Subscribe</a>
         </nav>
       </div>
     </header>
 
     <main>
       <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="container hero-inner">
-          <h1>Intelligent Transport Systems</h1>
-          <p class="lead">Designing smarter, safer, and more efficient transport through data-driven systems — traffic optimization, fleet telematics, and IoT-based predictive maintenance.</p>
-          <p><a class="btn" href="#projects">View Projects</a> <a class="btn ghost" href="#contact">Get in touch</a></p>
+          <div class="hero-badge">🚀 Welcome to the Future of Transport</div>
+          <h1 class="hero-title">
+            <span class="gradient-text">Intelligent Transport</span><br/>
+            Systems Redefined
+          </h1>
+          <p class="lead">Exploring cutting-edge mobility solutions through AI, IoT, and data science. From autonomous vehicles to smart traffic management — dive into the revolution transforming how we move.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#articles">Read Latest Articles</a>
+            <a class="btn ghost" href="#about">Learn More</a>
+          </div>
+          <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="container section about">
-        <h2>About this portfolio</h2>
-        <p>This portfolio highlights practical Intelligent Transport System (ITS) work: optimization algorithms for traffic signals, real-time fleet monitoring dashboards, and predictive maintenance using sensor telemetry. Each project includes goals, technologies used, and outcomes or architecture highlights.</p>
-      </section>
+      <section id="featured" class="section featured-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Featured</span>
+            <h2>Editor's Picks</h2>
+            <p class="section-subtitle">Deep dives into revolutionary transport technologies</p>
+          </div>
+          
+          <div class="featured-grid">
+            <article class="featured-card large" data-animate>
+              <div class="featured-img ai-traffic"></div>
+              <div class="featured-content">
+                <div class="post-meta">
+                  <span class="category">AI & Machine Learning</span>
+                  <span class="read-time">8 min read</span>
+                </div>
+                <h3>How AI is Revolutionizing Traffic Management in Smart Cities</h3>
+                <p>Discover how machine learning algorithms predict congestion patterns and optimize signal timing in real-time, reducing travel time by up to 35% in urban environments.</p>
+                <a href="posts/ai-traffic-management.html" class="read-more">Read Article →</a>
+              </div>
+            </article>
 
-      <section id="projects" class="container section projects">
-        <h2>Featured Projects</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="card-media traffic"></div>
-            <div class="card-body">
-              <h3>Smart Traffic Signal Optimization</h3>
-              <p>Adaptive signal control that reduces travel time and stops by dynamically adjusting phase timing from real-time traffic flow data and short-term predictions.</p>
-              <p class="meta"><strong>Tech:</strong> Python, OpenTraffic, Redis, TensorFlow, MQTT</p>
-              <p class="links"><a href="#">Details</a> • <a href="#">Code</a></p>
-            </div>
-          </article>
+            <article class="featured-card" data-animate>
+              <div class="featured-img autonomous"></div>
+              <div class="featured-content">
+                <div class="post-meta">
+                  <span class="category">Autonomous Vehicles</span>
+                  <span class="read-time">6 min read</span>
+                </div>
+                <h3>The Road to Level 5 Autonomy</h3>
+                <p>Breaking down the technological barriers and ethical considerations in achieving fully autonomous transportation systems.</p>
+                <a href="posts/level-5-autonomy.html" class="read-more">Read Article →</a>
+              </div>
+            </article>
 
-          <article class="card">
-            <div class="card-media fleet"></div>
-            <div class="card-body">
-              <h3>Real-time Fleet Management Dashboard</h3>
-              <p>A responsive dashboard for live vehicle tracking, geofencing alerts, route adherence analytics and fuel/energy efficiency reporting for mixed fleets.</p>
-              <p class="meta"><strong>Tech:</strong> React, Mapbox GL, Node.js, PostgreSQL (PostGIS)</p>
-              <p class="links"><a href="#">Demo</a> • <a href="#">Code</a></p>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media iot"></div>
-            <div class="card-body">
-              <h3>Predictive Maintenance with IoT</h3>
-              <p>Edge-to-cloud pipeline collecting vehicle sensor telemetry, analyzing vibration and temperature data to predict component failures and schedule maintenance.</p>
-              <p class="meta"><strong>Tech:</strong> MQTT, AWS IoT Core, InfluxDB, Grafana, scikit-learn</p>
-              <p class="links"><a href="#">Architecture</a> • <a href="#">Code</a></p>
-            </div>
-          </article>
+            <article class="featured-card" data-animate>
+              <div class="featured-img iot-fleet"></div>
+              <div class="featured-content">
+                <div class="post-meta">
+                  <span class="category">IoT & Connectivity</span>
+                  <span class="read-time">7 min read</span>
+                </div>
+                <h3>IoT-Powered Fleet Optimization</h3>
+                <p>Real-time telemetry and predictive maintenance are transforming logistics — learn how connected vehicles save millions in operational costs.</p>
+                <a href="posts/iot-fleet-optimization.html" class="read-more">Read Article →</a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="skills" class="container section skills">
-        <h2>Skills & Tools</h2>
-        <ul class="skills-list">
-          <li>Traffic modeling & simulation (SUMO/OpenTraffic)</li>
-          <li>Real-time data pipelines (MQTT, Kafka)</li>
-          <li>Data science & ML (scikit-learn, TensorFlow)</li>
-          <li>Mapping and spatial databases (Mapbox, PostGIS)</li>
-          <li>Cloud & DevOps (AWS, Docker, CI/CD)</li>
-        </ul>
+      <section id="articles" class="section articles-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Latest</span>
+            <h2>Recent Articles</h2>
+          </div>
+
+          <div class="articles-grid">
+            <article class="article-card" data-animate>
+              <div class="article-img traffic-sim"></div>
+              <div class="article-content">
+                <span class="category">Traffic Engineering</span>
+                <h3>SUMO Simulation: Modeling Urban Traffic Flows</h3>
+                <p>A practical guide to building microscopic traffic simulations for testing ITS algorithms before deployment.</p>
+                <div class="article-footer">
+                  <span class="date">Nov 1, 2025</span>
+                  <a href="posts/sumo-simulation.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-animate>
+              <div class="article-img ev-charging"></div>
+              <div class="article-content">
+                <span class="category">Electric Mobility</span>
+                <h3>Smart EV Charging Infrastructure</h3>
+                <p>How dynamic load balancing and V2G technology is reshaping the electric vehicle ecosystem.</p>
+                <div class="article-footer">
+                  <span class="date">Oct 28, 2025</span>
+                  <a href="posts/ev-charging.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-animate>
+              <div class="article-img maas"></div>
+              <div class="article-content">
+                <span class="category">Mobility as a Service</span>
+                <h3>MaaS: The Future of Urban Transportation</h3>
+                <p>Exploring integrated mobility platforms that combine public transit, ride-sharing, and micro-mobility into seamless journeys.</p>
+                <div class="article-footer">
+                  <span class="date">Oct 25, 2025</span>
+                  <a href="posts/maas-future.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-animate>
+              <div class="article-img safety"></div>
+              <div class="article-content">
+                <span class="category">Safety & Security</span>
+                <h3>Cybersecurity in Connected Vehicles</h3>
+                <p>Protecting V2X communications and in-vehicle networks from emerging cyber threats.</p>
+                <div class="article-footer">
+                  <span class="date">Oct 22, 2025</span>
+                  <a href="posts/vehicle-cybersecurity.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-animate>
+              <div class="article-img data-viz"></div>
+              <div class="article-content">
+                <span class="category">Data Science</span>
+                <h3>Visualizing Transportation Big Data</h3>
+                <p>Tools and techniques for analyzing massive mobility datasets to uncover urban movement patterns.</p>
+                <div class="article-footer">
+                  <span class="date">Oct 19, 2025</span>
+                  <a href="posts/data-visualization.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card" data-animate>
+              <div class="article-img sustainability"></div>
+              <div class="article-content">
+                <span class="category">Sustainability</span>
+                <h3>Green Logistics & Carbon-Neutral Delivery</h3>
+                <p>How AI-optimized routing and electric last-mile delivery are reducing the carbon footprint of urban logistics.</p>
+                <div class="article-footer">
+                  <span class="date">Oct 16, 2025</span>
+                  <a href="posts/green-logistics.html" class="read-link">Read →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="load-more-wrapper">
+            <button class="btn secondary">Load More Articles</button>
+          </div>
+        </div>
       </section>
 
-      <section id="contact" class="container section contact">
-        <h2>Contact</h2>
-        <p>Prefer email? <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>Or find me on <a href="#">GitHub</a> and <a href="#">LinkedIn</a>.</p>
-        <p>If you want an integrated contact form, see the README for quick Formspree/Netlify instructions.</p>
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content" data-animate>
+              <span class="section-badge">About ITS Nexus</span>
+              <h2>Bridging Research & Innovation</h2>
+              <p>ITS Nexus is your gateway to understanding how technology is reshaping transportation. We explore the intersection of artificial intelligence, IoT, data science, and urban planning to create smarter, safer, and more sustainable mobility solutions.</p>
+              <p>From academic research to real-world implementations, we break down complex systems into accessible insights for engineers, policymakers, and transportation enthusiasts.</p>
+              <div class="stats-row">
+                <div class="stat">
+                  <div class="stat-number">50+</div>
+                  <div class="stat-label">Articles Published</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">10k+</div>
+                  <div class="stat-label">Monthly Readers</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">15</div>
+                  <div class="stat-label">Expert Contributors</div>
+                </div>
+              </div>
+            </div>
+            <div class="about-visual" data-animate>
+              <div class="visual-card">
+                <div class="icon">🚗</div>
+                <h4>Autonomous Systems</h4>
+              </div>
+              <div class="visual-card">
+                <div class="icon">🤖</div>
+                <h4>AI & Machine Learning</h4>
+              </div>
+              <div class="visual-card">
+                <div class="icon">📡</div>
+                <h4>IoT & Connectivity</h4>
+              </div>
+              <div class="visual-card">
+                <div class="icon">🌍</div>
+                <h4>Smart Cities</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="subscribe" class="section subscribe-section">
+        <div class="container">
+          <div class="subscribe-box" data-animate>
+            <div class="subscribe-icon">📬</div>
+            <h2>Stay Updated</h2>
+            <p>Get the latest articles on intelligent transport systems delivered to your inbox weekly.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn primary">Subscribe</button>
+            </form>
+            <p class="privacy-note">No spam. Unsubscribe anytime.</p>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> ITS Portfolio — Built for demonstration and hiring. License: MIT.</p>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <img src="assets/logo.svg" alt="ITS Nexus" class="logo" />
+              <span>ITS NEXUS</span>
+            </div>
+            <p>Exploring the future of intelligent transportation systems.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#featured">Featured</a>
+            <a href="#articles">Articles</a>
+            <a href="#about">About</a>
+          </div>
+          <div class="footer-col">
+            <h4>Topics</h4>
+            <a href="#">Autonomous Vehicles</a>
+            <a href="#">Smart Traffic</a>
+            <a href="#">IoT & Connectivity</a>
+            <a href="#">Sustainability</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="https://github.com/AyUsHh66">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="mailto:contact@itsnexus.com">Email</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> ITS Nexus. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
