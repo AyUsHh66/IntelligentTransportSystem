@@ -1,303 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ITS Nexus — Intelligent Transport Systems Blog</title>
-    <meta name="description" content="Exploring the future of mobility: AI-driven traffic systems, autonomous vehicles, smart cities, and transportation innovation." />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelligent Transportation System | Portfolio & Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              secondary: '#4f46e5',
+            }
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
-    <div id="progress-bar"></div>
-    
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#">
-          <img src="assets/logo.svg" alt="ITS Nexus" class="logo" />
-          <span class="brand-text">ITS <span class="highlight">NEXUS</span></span>
-        </a>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+  <body class="bg-gray-50 text-gray-800 scroll-smooth">
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 z-50 transition-all"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-40 top-0">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="assets/logo.svg" alt="ITS Logo" class="h-10 w-10" />
+          <h1 class="text-2xl font-bold text-blue-600">ITS Portfolio</h1>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
-        <nav id="site-nav" class="site-nav">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#featured" class="nav-link">Featured</a>
-          <a href="#articles" class="nav-link">Articles</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#subscribe" class="nav-link">Subscribe</a>
-        </nav>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 font-medium">
+          <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+          <li><a href="#features" class="hover:text-blue-600 transition">Features</a></li>
+          <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+          <li><a href="#tech" class="hover:text-blue-600 transition">Tech Stack</a></li>
+          <li><a href="#research" class="hover:text-blue-600 transition">Research</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+        </ul>
       </div>
-    </header>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <ul class="flex flex-col space-y-2 px-6 py-4">
+          <li><a href="#about" class="block hover:text-blue-600 transition">About</a></li>
+          <li><a href="#features" class="block hover:text-blue-600 transition">Features</a></li>
+          <li><a href="#projects" class="block hover:text-blue-600 transition">Projects</a></li>
+          <li><a href="#tech" class="block hover:text-blue-600 transition">Tech Stack</a></li>
+          <li><a href="#research" class="block hover:text-blue-600 transition">Research</a></li>
+          <li><a href="#contact" class="block hover:text-blue-600 transition">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-inner">
-          <div class="hero-badge">🚀 Welcome to the Future of Transport</div>
-          <h1 class="hero-title">
-            <span class="gradient-text">Intelligent Transport</span><br/>
-            Systems Redefined
-          </h1>
-          <p class="lead">Exploring cutting-edge mobility solutions through AI, IoT, and data science. From autonomous vehicles to smart traffic management — dive into the revolution transforming how we move.</p>
-          <div class="hero-cta">
-            <a class="btn primary" href="#articles">Read Latest Articles</a>
-            <a class="btn ghost" href="#about">Learn More</a>
-          </div>
-          <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-arrow">↓</div>
-          </div>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+        <div class="absolute top-40 right-20 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-40 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <span class="text-sm font-semibold">🚀 Welcome to the Future of Transport</span>
         </div>
-      </section>
-
-      <section id="featured" class="section featured-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Featured</span>
-            <h2>Editor's Picks</h2>
-            <p class="section-subtitle">Deep dives into revolutionary transport technologies</p>
-          </div>
-          
-          <div class="featured-grid">
-            <article class="featured-card large" data-animate>
-              <div class="featured-img ai-traffic"></div>
-              <div class="featured-content">
-                <div class="post-meta">
-                  <span class="category">AI & Machine Learning</span>
-                  <span class="read-time">8 min read</span>
-                </div>
-                <h3>How AI is Revolutionizing Traffic Management in Smart Cities</h3>
-                <p>Discover how machine learning algorithms predict congestion patterns and optimize signal timing in real-time, reducing travel time by up to 35% in urban environments.</p>
-                <a href="posts/ai-traffic-management.html" class="read-more">Read Article →</a>
-              </div>
-            </article>
-
-            <article class="featured-card" data-animate>
-              <div class="featured-img autonomous"></div>
-              <div class="featured-content">
-                <div class="post-meta">
-                  <span class="category">Autonomous Vehicles</span>
-                  <span class="read-time">6 min read</span>
-                </div>
-                <h3>The Road to Level 5 Autonomy</h3>
-                <p>Breaking down the technological barriers and ethical considerations in achieving fully autonomous transportation systems.</p>
-                <a href="posts/level-5-autonomy.html" class="read-more">Read Article →</a>
-              </div>
-            </article>
-
-            <article class="featured-card" data-animate>
-              <div class="featured-img iot-fleet"></div>
-              <div class="featured-content">
-                <div class="post-meta">
-                  <span class="category">IoT & Connectivity</span>
-                  <span class="read-time">7 min read</span>
-                </div>
-                <h3>IoT-Powered Fleet Optimization</h3>
-                <p>Real-time telemetry and predictive maintenance are transforming logistics — learn how connected vehicles save millions in operational costs.</p>
-                <a href="posts/iot-fleet-optimization.html" class="read-more">Read Article →</a>
-              </div>
-            </article>
-          </div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Intelligent Transportation<br/>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-300">System</span>
+        </h2>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+          Enhancing traffic efficiency, road safety, and urban mobility using cutting-edge AI, IoT, and machine learning technologies.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#projects" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transform hover:scale-105 transition shadow-lg">
+            View Projects
+          </a>
+          <a href="#contact" class="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transform hover:scale-105 transition">
+            Get in Touch
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="articles" class="section articles-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-badge">Latest</span>
-            <h2>Recent Articles</h2>
-          </div>
+    <style>
+      @keyframes blob {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+      }
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+    </style>
 
-          <div class="articles-grid">
-            <article class="article-card" data-animate>
-              <div class="article-img traffic-sim"></div>
-              <div class="article-content">
-                <span class="category">Traffic Engineering</span>
-                <h3>SUMO Simulation: Modeling Urban Traffic Flows</h3>
-                <p>A practical guide to building microscopic traffic simulations for testing ITS algorithms before deployment.</p>
-                <div class="article-footer">
-                  <span class="date">Nov 1, 2025</span>
-                  <a href="posts/sumo-simulation.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
 
-            <article class="article-card" data-animate>
-              <div class="article-img ev-charging"></div>
-              <div class="article-content">
-                <span class="category">Electric Mobility</span>
-                <h3>Smart EV Charging Infrastructure</h3>
-                <p>How dynamic load balancing and V2G technology is reshaping the electric vehicle ecosystem.</p>
-                <div class="article-footer">
-                  <span class="date">Oct 28, 2025</span>
-                  <a href="posts/ev-charging.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card" data-animate>
-              <div class="article-img maas"></div>
-              <div class="article-content">
-                <span class="category">Mobility as a Service</span>
-                <h3>MaaS: The Future of Urban Transportation</h3>
-                <p>Exploring integrated mobility platforms that combine public transit, ride-sharing, and micro-mobility into seamless journeys.</p>
-                <div class="article-footer">
-                  <span class="date">Oct 25, 2025</span>
-                  <a href="posts/maas-future.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card" data-animate>
-              <div class="article-img safety"></div>
-              <div class="article-content">
-                <span class="category">Safety & Security</span>
-                <h3>Cybersecurity in Connected Vehicles</h3>
-                <p>Protecting V2X communications and in-vehicle networks from emerging cyber threats.</p>
-                <div class="article-footer">
-                  <span class="date">Oct 22, 2025</span>
-                  <a href="posts/vehicle-cybersecurity.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card" data-animate>
-              <div class="article-img data-viz"></div>
-              <div class="article-content">
-                <span class="category">Data Science</span>
-                <h3>Visualizing Transportation Big Data</h3>
-                <p>Tools and techniques for analyzing massive mobility datasets to uncover urban movement patterns.</p>
-                <div class="article-footer">
-                  <span class="date">Oct 19, 2025</span>
-                  <a href="posts/data-visualization.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card" data-animate>
-              <div class="article-img sustainability"></div>
-              <div class="article-content">
-                <span class="category">Sustainability</span>
-                <h3>Green Logistics & Carbon-Neutral Delivery</h3>
-                <p>How AI-optimized routing and electric last-mile delivery are reducing the carbon footprint of urban logistics.</p>
-                <div class="article-footer">
-                  <span class="date">Oct 16, 2025</span>
-                  <a href="posts/green-logistics.html" class="read-link">Read →</a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="load-more-wrapper">
-            <button class="btn secondary">Load More Articles</button>
-          </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold uppercase tracking-wide">About the Project</span>
+          <h3 class="text-4xl font-bold text-gray-900 mt-2 mb-6">Building Smarter Cities</h3>
+          <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+            The Intelligent Transportation System (ITS) integrates modern sensors, real-time communication, and AI-based technologies to revolutionize traffic flow, reduce congestion, and enhance road safety. This comprehensive system monitors, analyzes, and responds to traffic situations with unprecedented efficiency.
+          </p>
         </div>
-      </section>
-
-      <section id="about" class="section about-section">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-content" data-animate>
-              <span class="section-badge">About ITS Nexus</span>
-              <h2>Bridging Research & Innovation</h2>
-              <p>ITS Nexus is your gateway to understanding how technology is reshaping transportation. We explore the intersection of artificial intelligence, IoT, data science, and urban planning to create smarter, safer, and more sustainable mobility solutions.</p>
-              <p>From academic research to real-world implementations, we break down complex systems into accessible insights for engineers, policymakers, and transportation enthusiasts.</p>
-              <div class="stats-row">
-                <div class="stat">
-                  <div class="stat-number">50+</div>
-                  <div class="stat-label">Articles Published</div>
-                </div>
-                <div class="stat">
-                  <div class="stat-number">10k+</div>
-                  <div class="stat-label">Monthly Readers</div>
-                </div>
-                <div class="stat">
-                  <div class="stat-number">15</div>
-                  <div class="stat-label">Expert Contributors</div>
-                </div>
-              </div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="text-center p-6">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
             </div>
-            <div class="about-visual" data-animate>
-              <div class="visual-card">
-                <div class="icon">🚗</div>
-                <h4>Autonomous Systems</h4>
-              </div>
-              <div class="visual-card">
-                <div class="icon">🤖</div>
-                <h4>AI & Machine Learning</h4>
-              </div>
-              <div class="visual-card">
-                <div class="icon">📡</div>
-                <h4>IoT & Connectivity</h4>
-              </div>
-              <div class="visual-card">
-                <div class="icon">🌍</div>
-                <h4>Smart Cities</h4>
+            <h4 class="text-xl font-bold mb-2">Real-Time Processing</h4>
+            <p class="text-gray-600">Instant data analysis and response for optimal traffic management</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Enhanced Safety</h4>
+            <p class="text-gray-600">AI-powered detection and prevention of traffic incidents</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Cloud Integration</h4>
+            <p class="text-gray-600">Scalable cloud infrastructure for citywide deployment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold uppercase tracking-wide">Key Features</span>
+          <h3 class="text-4xl font-bold text-gray-900 mt-2">Cutting-Edge Capabilities</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Real-Time Traffic Monitoring</h4>
+            <p class="text-gray-600">IoT sensors and computer vision cameras monitor traffic conditions, vehicle density, and movement patterns 24/7 with millisecond precision.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">AI-Powered Traffic Signals</h4>
+            <p class="text-gray-600">Machine learning algorithms dynamically adjust signal timing based on congestion levels, reducing wait times by up to 40% during peak hours.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-purple-500 to-purple-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Emergency Vehicle Priority</h4>
+            <p class="text-gray-600">Automatic detection and green-light corridors for ambulances, fire trucks, and police vehicles, reducing emergency response time significantly.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-green-500 to-green-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Predictive Analytics</h4>
+            <p class="text-gray-600">Machine learning models forecast traffic patterns, predict congestion hotspots, and suggest optimal routes before issues arise.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-red-500 to-red-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Incident Detection & Alerts</h4>
+            <p class="text-gray-600">Computer vision identifies accidents, stalled vehicles, and hazards in real-time, alerting authorities and redirecting traffic instantly.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300">
+            <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3">V2X Communication</h4>
+            <p class="text-gray-600">Vehicle-to-everything connectivity enables cars to communicate with infrastructure, pedestrians, and each other for coordinated movement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold uppercase tracking-wide">Projects</span>
+          <h3 class="text-4xl font-bold text-gray-900 mt-2">Real-World Implementations</h3>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center">
+              <svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">AI & ML</span>
+              <h4 class="text-xl font-bold mt-4 mb-3">Smart Traffic Signal Optimization</h4>
+              <p class="text-gray-600 mb-4">Adaptive signal control using reinforcement learning that reduces travel time by 35% and vehicle emissions by 28%.</p>
+              <p class="text-sm text-gray-500 mb-4"><strong>Tech:</strong> Python, TensorFlow, Redis, MQTT, OpenCV</p>
+              <div class="flex gap-3">
+                <a href="posts/ai-traffic-management.html" class="text-blue-600 font-semibold text-sm hover:underline">Learn More →</a>
+                <a href="#" class="text-gray-600 font-semibold text-sm hover:underline">View Code →</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section id="subscribe" class="section subscribe-section">
-        <div class="container">
-          <div class="subscribe-box" data-animate>
-            <div class="subscribe-icon">📬</div>
-            <h2>Stay Updated</h2>
-            <p>Get the latest articles on intelligent transport systems delivered to your inbox weekly.</p>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit" class="btn primary">Subscribe</button>
-            </form>
-            <p class="privacy-note">No spam. Unsubscribe anytime.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <div class="footer-brand">
-              <img src="assets/logo.svg" alt="ITS Nexus" class="logo" />
-              <span>ITS NEXUS</span>
+          <!-- Project 2 -->
+          <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+              <svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+              </svg>
             </div>
-            <p>Exploring the future of intelligent transportation systems.</p>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">IoT & Telematics</span>
+              <h4 class="text-xl font-bold mt-4 mb-3">Real-Time Fleet Management</h4>
+              <p class="text-gray-600 mb-4">Live vehicle tracking dashboard with geofencing, route optimization, and fuel efficiency analytics for commercial fleets.</p>
+              <p class="text-sm text-gray-500 mb-4"><strong>Tech:</strong> React, Mapbox GL, Node.js, PostgreSQL (PostGIS)</p>
+              <div class="flex gap-3">
+                <a href="#" class="text-purple-600 font-semibold text-sm hover:underline">Demo →</a>
+                <a href="#" class="text-gray-600 font-semibold text-sm hover:underline">GitHub →</a>
+              </div>
+            </div>
           </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="#home">Home</a>
-            <a href="#featured">Featured</a>
-            <a href="#articles">Articles</a>
-            <a href="#about">About</a>
-          </div>
-          <div class="footer-col">
-            <h4>Topics</h4>
-            <a href="#">Autonomous Vehicles</a>
-            <a href="#">Smart Traffic</a>
-            <a href="#">IoT & Connectivity</a>
-            <a href="#">Sustainability</a>
-          </div>
-          <div class="footer-col">
-            <h4>Connect</h4>
-            <a href="https://github.com/AyUsHh66">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="mailto:contact@itsnexus.com">Email</a>
+
+          <!-- Project 3 -->
+          <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+            <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
+              <svg class="w-20 h-20 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">Predictive Maintenance</span>
+              <h4 class="text-xl font-bold mt-4 mb-3">IoT-Based Vehicle Health Monitor</h4>
+              <p class="text-gray-600 mb-4">Edge-to-cloud pipeline for predictive maintenance using vehicle sensor data, preventing failures before they occur.</p>
+              <p class="text-sm text-gray-500 mb-4"><strong>Tech:</strong> AWS IoT Core, InfluxDB, Grafana, scikit-learn</p>
+              <div class="flex gap-3">
+                <a href="#" class="text-green-600 font-semibold text-sm hover:underline">Architecture →</a>
+                <a href="#" class="text-gray-600 font-semibold text-sm hover:underline">Code →</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>© <span id="year"></span> ITS Nexus. All rights reserved.</p>
+      </div>
+    </section>
+
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold uppercase tracking-wide">Technology Stack</span>
+          <h3 class="text-4xl font-bold text-gray-900 mt-2">Powered By Industry Leaders</h3>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <span class="bg-blue-100 text-blue-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Python</span>
+          <span class="bg-indigo-100 text-indigo-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">TensorFlow</span>
+          <span class="bg-purple-100 text-purple-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">PyTorch</span>
+          <span class="bg-pink-100 text-pink-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">OpenCV</span>
+          <span class="bg-red-100 text-red-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Raspberry Pi</span>
+          <span class="bg-orange-100 text-orange-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Arduino</span>
+          <span class="bg-yellow-100 text-yellow-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">IoT Sensors</span>
+          <span class="bg-green-100 text-green-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">AWS IoT</span>
+          <span class="bg-teal-100 text-teal-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">PostgreSQL</span>
+          <span class="bg-cyan-100 text-cyan-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Redis</span>
+          <span class="bg-blue-100 text-blue-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">React.js</span>
+          <span class="bg-indigo-100 text-indigo-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Node.js</span>
+          <span class="bg-purple-100 text-purple-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Docker</span>
+          <span class="bg-pink-100 text-pink-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Kafka</span>
+          <span class="bg-red-100 text-red-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">MQTT</span>
+          <span class="bg-orange-100 text-orange-700 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition">Mapbox</span>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-6 mt-16">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+            <p class="text-gray-600">IoT Devices Deployed</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-indigo-600 mb-2">99.9%</div>
+            <p class="text-gray-600">System Uptime</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-purple-600 mb-2">40%</div>
+            <p class="text-gray-600">Traffic Delay Reduction</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-pink-600 mb-2">10k+</div>
+            <p class="text-gray-600">Vehicles Monitored Daily</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research/Blog Section -->
+    <section id="research" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold uppercase tracking-wide">Research & Insights</span>
+          <h3 class="text-4xl font-bold text-gray-900 mt-2">Latest Articles</h3>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+            <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">AI & ML</span>
+              <h4 class="text-lg font-bold mt-4 mb-2">AI-Powered Traffic Optimization</h4>
+              <p class="text-gray-600 text-sm mb-4">How machine learning algorithms reduce congestion by 35% in smart cities.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-500">Nov 1, 2025</span>
+                <a href="posts/ai-traffic-management.html" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+            <div class="h-48 bg-gradient-to-r from-green-400 to-teal-500"></div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">Autonomous</span>
+              <h4 class="text-lg font-bold mt-4 mb-2">The Road to Level 5 Autonomy</h4>
+              <p class="text-gray-600 text-sm mb-4">Exploring the challenges and breakthroughs in fully autonomous vehicles.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-500">Oct 28, 2025</span>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+            <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">IoT</span>
+              <h4 class="text-lg font-bold mt-4 mb-2">Connected Vehicle Ecosystem</h4>
+              <p class="text-gray-600 text-sm mb-4">V2X communication protocols enabling smart infrastructure coordination.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-500">Oct 25, 2025</span>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-4xl font-bold mb-6">Let's Collaborate</h3>
+        <p class="max-w-2xl mx-auto text-lg mb-8 opacity-90">
+          Have questions about intelligent transportation systems? Want to collaborate on a project or discuss research opportunities? I'd love to hear from you!
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+          <div class="flex items-center gap-3 bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <a href="mailto:contact@itssystem.com" class="font-semibold hover:underline">contact@itssystem.com</a>
+          </div>
+          <div class="flex items-center gap-3 bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-full">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+            <a href="https://ayushh66.github.io" class="font-semibold hover:underline">ayushh66.github.io</a>
+          </div>
+        </div>
+        <div class="flex justify-center gap-6">
+          <a href="https://github.com/AyUsHh66" target="_blank" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.840 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/ayushh66" target="_blank" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/ayushh66" target="_blank" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <img src="assets/logo.svg" alt="ITS Logo" class="h-8 w-8" />
+            <span class="text-xl font-bold text-white">ITS Portfolio</span>
+          </div>
+          <p class="text-center md:text-right">
+            &copy; <span id="year"></span> Intelligent Transportation System | Built with passion for smarter cities
+          </p>
         </div>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Reading progress bar
+      const progressBar = document.getElementById('progress-bar');
+      window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progressBar.style.width = scrolled + '%';
+      });
+
+      // Smooth scroll for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(section);
+      });
+    </script>
   </body>
 </html>
