@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Intelligent Transport Systems — Portfolio</title>
+    <meta name="description" content="Portfolio showcasing Intelligent Transport System projects: traffic optimization, fleet management, IoT predictive maintenance." />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img src="assets/logo.svg" alt="ITS Portfolio" class="logo" />
+          <span class="brand-text">ITS Portfolio</span>
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="site-nav" class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <h1>Intelligent Transport Systems</h1>
+          <p class="lead">Designing smarter, safer, and more efficient transport through data-driven systems — traffic optimization, fleet telematics, and IoT-based predictive maintenance.</p>
+          <p><a class="btn" href="#projects">View Projects</a> <a class="btn ghost" href="#contact">Get in touch</a></p>
+        </div>
+      </section>
+
+      <section id="about" class="container section about">
+        <h2>About this portfolio</h2>
+        <p>This portfolio highlights practical Intelligent Transport System (ITS) work: optimization algorithms for traffic signals, real-time fleet monitoring dashboards, and predictive maintenance using sensor telemetry. Each project includes goals, technologies used, and outcomes or architecture highlights.</p>
+      </section>
+
+      <section id="projects" class="container section projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-media traffic"></div>
+            <div class="card-body">
+              <h3>Smart Traffic Signal Optimization</h3>
+              <p>Adaptive signal control that reduces travel time and stops by dynamically adjusting phase timing from real-time traffic flow data and short-term predictions.</p>
+              <p class="meta"><strong>Tech:</strong> Python, OpenTraffic, Redis, TensorFlow, MQTT</p>
+              <p class="links"><a href="#">Details</a> • <a href="#">Code</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media fleet"></div>
+            <div class="card-body">
+              <h3>Real-time Fleet Management Dashboard</h3>
+              <p>A responsive dashboard for live vehicle tracking, geofencing alerts, route adherence analytics and fuel/energy efficiency reporting for mixed fleets.</p>
+              <p class="meta"><strong>Tech:</strong> React, Mapbox GL, Node.js, PostgreSQL (PostGIS)</p>
+              <p class="links"><a href="#">Demo</a> • <a href="#">Code</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media iot"></div>
+            <div class="card-body">
+              <h3>Predictive Maintenance with IoT</h3>
+              <p>Edge-to-cloud pipeline collecting vehicle sensor telemetry, analyzing vibration and temperature data to predict component failures and schedule maintenance.</p>
+              <p class="meta"><strong>Tech:</strong> MQTT, AWS IoT Core, InfluxDB, Grafana, scikit-learn</p>
+              <p class="links"><a href="#">Architecture</a> • <a href="#">Code</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="container section skills">
+        <h2>Skills & Tools</h2>
+        <ul class="skills-list">
+          <li>Traffic modeling & simulation (SUMO/OpenTraffic)</li>
+          <li>Real-time data pipelines (MQTT, Kafka)</li>
+          <li>Data science & ML (scikit-learn, TensorFlow)</li>
+          <li>Mapping and spatial databases (Mapbox, PostGIS)</li>
+          <li>Cloud & DevOps (AWS, Docker, CI/CD)</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="container section contact">
+        <h2>Contact</h2>
+        <p>Prefer email? <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>Or find me on <a href="#">GitHub</a> and <a href="#">LinkedIn</a>.</p>
+        <p>If you want an integrated contact form, see the README for quick Formspree/Netlify instructions.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ITS Portfolio — Built for demonstration and hiring. License: MIT.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
